@@ -17,7 +17,7 @@ jobs:
       uses: docker/setup-buildx-action@v2
 
     - name: Login to Docker Hub
-      run: echo "${{ secrets.arshiya@2207 }}" | docker login -u "${{ secrets.arshiya2207 }}" --password-stdin
+      run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
 
     - name: Build Docker Image
       run: docker build -t arshiya2207/flaskapp:latest .
